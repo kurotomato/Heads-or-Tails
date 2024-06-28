@@ -4,16 +4,27 @@
 
 #define Roundnum 3
 
+void askName(void);
 void coinTossing(void);
 void display(int, int);
 void checkVictory(int, int);
 
-int main(){
-    printf("Tossing a coin...\n");
+char username[20];
 
+int main(){
+    askName();
     coinTossing();
 
     return 0;
+}
+
+void askName(){
+    printf("Who are you?\n");
+    printf("> ");
+
+    scanf("%s", username);
+
+    printf("Hello, %s!\n",username);
 }
 
 void coinTossing(){
@@ -23,6 +34,8 @@ void coinTossing(){
     srand((unsigned int) time(NULL));
 
     //Start tossing//
+    printf("Tossing a coin...\n");
+
     for(int i = 1; i <= Roundnum; i++){
         printf("Round %d: ", i);
 
