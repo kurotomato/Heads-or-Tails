@@ -70,10 +70,10 @@ void display(int head, int tail){
 
 void checkVictory(int head, int tail){
     if(head > tail){
-        printf("You won!\n");
+        printf("%s won!\n", username);
     }
     else{
-        printf("You lost..\n");
+        printf("%s lost..\n", username);
     }
 
     return;
