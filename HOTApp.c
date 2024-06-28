@@ -6,6 +6,7 @@
 
 void coinTossing(void);
 void display(int, int);
+void checkVictory(int, int);
 
 int main(){
     printf("Tossing a coin...\n");
@@ -42,12 +43,25 @@ void coinTossing(){
     //Review number of head and tail//
     display(head, tail);
 
+    //Review won or lost//
+    checkVictory(head, tail);
 
     return;
 }
 
 void display(int head, int tail){
     printf("Heads: %d, Tails: %d\n", head, tail);
+
+    return;
+}
+
+void checkVictory(int head, int tail){
+    if(head > tail){
+        printf("You won!\n");
+    }
+    else{
+        printf("You lost..\n");
+    }
 
     return;
 }
